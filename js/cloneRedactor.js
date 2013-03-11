@@ -24,6 +24,13 @@ ready(function(){var popup_ouverte="";if(!document.getElementById("shadow")){var
  *
  * ---------------------------------------------------------------------------------------------------- */
 
+function argsToArray(args)
+{
+  var r = []; for (var i = 0; i < args.length; i++)
+    r.push(args[i]);
+  return r;
+}
+
 function confirmation(message)
 {
     if(confirm(message))
@@ -194,39 +201,37 @@ function cloneRedactor(textarea, config_outils)
               // cacher les colorpicker ouvert
               function fermer_colorpicker()
               {
-                var arr = document.getElementsByName('DIVcolorpicker');
-                for(var i=0;i<arr.length;i++) 
+                argsToArray(document.getElementsByName('DIVcolorpicker')).forEach(function(element, index, array)
                 {
-                  if(arr[i].style.display == "block")
+                  if(element.style.display == "block")
                   {
                     // fermeture de tu colopicker ouvert
-                    arr[i].style.display = 'none'
+                    element.style.display = 'none'
 
                     // desactivation du bouton 
-                    var UniqueId = getStringAfterLastMotif(arr[i].id, '_');
+                    var UniqueId = getStringAfterLastMotif(element.id, '_');
                     var forecolor = document.getElementById('forecolor_'+UniqueId);
                     forecolor.className = forecolor.className.replace(" active", ""); 
                   }
-                }          
+                });
               }
 
               // cacher les format de texte ouvert
               function fermer_divformat()
               {
-                var arr = document.getElementsByName('DIVformat');
-                for(var i=0;i<arr.length;i++) 
+                argsToArray(document.getElementsByName('DIVformat')).forEach(function(element, index, array)
                 {
-                  if(arr[i].style.display == "block")
+                  if(element.style.display == "block")
                   {
                     // fermeture de tout DIVformat ouvert
-                    arr[i].style.display = 'none'
+                    element.style.display = 'none'
 
                     // desactivation du bouton 
-                    var UniqueId = getStringAfterLastMotif(arr[i].id, '_');
+                    var UniqueId = getStringAfterLastMotif(element.id, '_');
                     var format = document.getElementById('format_'+UniqueId);
                     format.className = format.className.replace("active", ""); 
                   }
-                }          
+                });
               }
 
 
@@ -419,10 +424,9 @@ function cloneRedactor(textarea, config_outils)
 
 
     // Format du texte
-          var arr = document.getElementsByName('format-button_'+UniqueId);
-          for(var i=0;i<arr.length;i++) 
+          argsToArray(document.getElementsByName('format-button_'+UniqueId)).forEach(function(element, index, array)
           {
-            arr[i].onclick = function()
+            element.onclick = function()
             {
               // recuperation de la couleur 
               var type = this.getAttribute("data-commandvalue");
@@ -431,7 +435,7 @@ function cloneRedactor(textarea, config_outils)
 
               customCommand('formatBlock', false, type, UniqueId);
             };
-          }
+          });
 
           if(issetId('format_'+UniqueId))
           {
@@ -455,10 +459,9 @@ function cloneRedactor(textarea, config_outils)
           }
 
     // COULEUR DU TEXTE
-          var arr = document.getElementsByName('color-forecolor_'+UniqueId);
-          for(var i=0;i<arr.length;i++) 
+          argsToArray(document.getElementsByName('color-forecolor_'+UniqueId)).forEach(function(element, index, array)
           {
-            arr[i].onclick = function()
+            element.onclick = function()
             {
               // recuperation de la couleur 
               var color = this.getAttribute("data-commandvalue");
@@ -466,7 +469,7 @@ function cloneRedactor(textarea, config_outils)
               var UniqueId = getStringAfterLastMotif(this.name, '_');
               customCommand('forecolor', false, color, UniqueId);
             };
-          }
+          });
 
           if(issetId('forecolor_'+UniqueId))
           {
@@ -732,18 +735,17 @@ function cloneRedactor(textarea, config_outils)
  */
 ready(function()
 {
-    var list_Redactor = document.getElementsByClassName('cloneRedactor');
-    for(var i=0;i<list_Redactor.length;i++) 
+    argsToArray(document.getElementsByClassName('cloneRedactor')).forEach(function(element, index, array)
     {
-      if(list_Redactor[i].getAttribute("data-outils"))
+      if(element.getAttribute("data-outils"))
       {
-        var outils = list_Redactor[i].getAttribute("data-outils").split(',');
-        cloneRedactor(list_Redactor[i], outils );
+        var outils = element.getAttribute("data-outils").split(',');
+        cloneRedactor(element, outils );
       }
       else
       {
-        cloneRedactor(list_Redactor[i]);
+        cloneRedactor(element);
       }
-    }
+    });
 
 });
