@@ -1,3 +1,5 @@
+<?php  header( 'Content-Type: text/html; charset=UTF-8' );  ?>
+
 <div id="editor_{{UniqueId}}" name="ewysiwyg">
 	<div id="outils_{{UniqueId}}">
 

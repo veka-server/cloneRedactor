@@ -1,5 +1,6 @@
 // clone redactor
 (function(){
+
 	// requis
 	var myApp = window.myApp = window.myApp || {};
 	
@@ -9,7 +10,7 @@
 		var parametres = myApp.genConfig(element, outils);
 
     	// generer le code html du cloneRedactor
-		var output = Mustache.render(myApp.httpGet("template/test.tmp"), parametres);
+		var output = Mustache.render(myApp.httpGet("template/test.php"), parametres);
 
 		// affiche le redactor juste apres le textarea originel
 		element.insertAdjacentHTML('afterend',output);
