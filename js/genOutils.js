@@ -43,7 +43,7 @@
 
 		var retour = {
 		  UniqueId 	: 	myApp.lastId,
-		  contenu	: 	element.innerHTML,
+		  contenu	: 	element.textContent,
 		  outils 	: 	genOutils(outils)
 		};
 
