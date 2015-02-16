@@ -10,7 +10,7 @@
         }
 
 	    // contenu des bulles d'aide au survole des boutons
-        outils_title = {'html':'switch','bold':'gras','italic':'italique','underline':'sousligner','rayer':'rayer','link':'creer un lien','unlink':'supprimer un lien','picture':'creer une image','color':'changer la couleur du texte','orderedlist':'liste ordonné','unorderedlist':'liste non ordonné','alignleft':'aligner a gauche','aligncenter':'aligner au centre','alignright':'aligner a droite','justify':'justifier','format':'format du texte', 'undo':'annuler la derni&egrave;re action','redo':'retablir la derni&egrave;re action', 'format':'paragraphe'};
+        outils_title = {'html':'Switch','bold':'Gras','italic':'Italique','underline':'Sousligner','rayer':'Rayer','link':'Creer un lien','unlink':'Supprimer un lien','picture':'Creer une image','color':'Changer la couleur du texte','orderedlist':'Liste ordonné','unorderedlist':'Liste non ordonné','alignleft':'Aligner a gauche','aligncenter':'Aligner au centre','alignright':'Aligner a droite','justify':'Justifier','format':'Format du texte', 'undo':'Annuler la dernière action','redo':'Retablir la dernière action', 'format':'Paragraphe'};
 
 	    // genere le code HTML integrant la liste des outils
         var list_outils = [];
