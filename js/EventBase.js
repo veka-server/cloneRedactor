@@ -1,10 +1,10 @@
 // gestion des boutons simple
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
 
-        myApp.EventBase = function(UniqueId){
+        cloneRedactor.EventBase = function(UniqueId){
 			var tableau_input = { 'alignleft'     :'justifyleft',
 			                    'alignright'    :'justifyright',
 			                    'aligncenter'   :'justifycenter',
@@ -26,7 +26,7 @@
 				{
 				  document.getElementById(key+'_'+UniqueId).onclick = function()
 				  {
-					myApp.customCommand(tableau_input[this.id.replace('_'+UniqueId, '')], false, '', UniqueId);
+					cloneRedactor.customCommand(tableau_input[this.id.replace('_'+UniqueId, '')], false, '', UniqueId);
 				  };
 				}
 			}

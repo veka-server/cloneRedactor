@@ -1,9 +1,9 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.events = function(element, UniqueId) {
+	cloneRedactor.events = function(element, UniqueId) {
 
 		var textarea_editor = document.getElementById('textarea_editor_'+UniqueId+'');
 		var editor = document.getElementById('editor_'+UniqueId+'');
@@ -23,26 +23,26 @@
         editeur.contentEditable='true';
 
         // genereation des actions lors du cliq sur les boutons simple
-        myApp.EventBase(UniqueId);
+        cloneRedactor.EventBase(UniqueId);
 
-        myApp.EventLien(UniqueId);
+        cloneRedactor.EventLien(UniqueId);
 
-        myApp.EventImage(UniqueId);
+        cloneRedactor.EventImage(UniqueId);
 
-        myApp.EventColorText(UniqueId);
+        cloneRedactor.EventColorText(UniqueId);
 
-        myApp.EventFormat(UniqueId);
+        cloneRedactor.EventFormat(UniqueId);
 
-        myApp.EventSwitch(textarea_editor, editeur, UniqueId);
+        cloneRedactor.EventSwitch(textarea_editor, editeur, UniqueId);
 
         // copie, toutes les 100ms, les données dans le textarea originel
-        myApp.refresh(element,editeur)
+        cloneRedactor.refresh(element,editeur)
 
         // fermer les fenetre ouverte si l'on clique a l'exterieur de celle-ci
-        myApp.closeInutilise();
+        cloneRedactor.closeInutilise();
 
         // ouvre la fenetre de modification de lien
-        myApp.EventClic(editeur);
+        cloneRedactor.EventClic(editeur);
 
 	}	
 

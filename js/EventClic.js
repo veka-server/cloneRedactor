@@ -1,9 +1,9 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.EventClic = function(editeur) {
+	cloneRedactor.EventClic = function(editeur) {
 
           // detect le clic dans l'editeur
           editeur.onclick=function()

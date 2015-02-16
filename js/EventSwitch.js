@@ -1,9 +1,9 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.EventSwitch = function(textarea_editor, editeur, UniqueId) {
+	cloneRedactor.EventSwitch = function(textarea_editor, editeur, UniqueId) {
 
           if(document.getElementById('html_'+UniqueId))
           {

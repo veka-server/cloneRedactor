@@ -2,18 +2,18 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.EventImage = function(UniqueId) {
+	cloneRedactor.EventImage = function(UniqueId) {
 
           if(document.getElementById('link_'+UniqueId))
           {
             document.getElementById('picture_'+UniqueId).onclick=function()
             {
                 // enregistrer la selection
-                myApp.enregistrer_selection();
+                cloneRedactor.enregistrer_selection();
 
-                myApp.sourceId = UniqueId;
+                cloneRedactor.sourceId = UniqueId;
 
                 //ouverture de la popup
                 document.getElementById('popup_image').popup_open();
@@ -62,7 +62,7 @@
                                 }
 
                               var params = {'fichier': e1.target.files[0]};
-                              var url = myApp.post_to_url(myApp.url_upload, params);
+                              var url = cloneRedactor.post_to_url(cloneRedactor.url_upload, params);
                               document.getElementById('url-image').value = url;
 
                             }
@@ -97,9 +97,9 @@
               else
               {
                   // restorer la selection
-                  myApp.restorer_selection();
+                  cloneRedactor.restorer_selection();
                   // execution de la commande
-                  myApp.customCommand('insertimage', false, url, myApp.sourceId);
+                  cloneRedactor.customCommand('insertimage', false, url, cloneRedactor.sourceId);
               }
 
             }

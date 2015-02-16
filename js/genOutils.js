@@ -1,7 +1,7 @@
 // generation des outils
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 	
 	var genOutils = function(outils){
         if(outils == undefined)
@@ -36,13 +36,13 @@
         return list_outils;
 	}
 
-	myApp.genConfig = function(element, outils){
+	cloneRedactor.genConfig = function(element, outils){
 
 		// genere l'id du cloneRedactor
-	    myApp.getUniqueId();
+	    cloneRedactor.getUniqueId();
 
 		var retour = {
-		  UniqueId 	: 	myApp.lastId,
+		  UniqueId 	: 	cloneRedactor.lastId,
 		  contenu	: 	element.textContent,
 		  outils 	: 	genOutils(outils)
 		};

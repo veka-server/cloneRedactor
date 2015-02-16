@@ -2,9 +2,9 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.closeInutilise = function(UniqueId) {
+	cloneRedactor.closeInutilise = function(UniqueId) {
 
 		// fermer les fenetres tel que colopicker et le format texte lors d'un clic exterieur
 		document.body.onclick = function(e)
@@ -21,8 +21,8 @@
 			  }
 			}
 
-			myApp.fermer_colorpicker();
-			myApp.fermer_divformat();
+			cloneRedactor.fermer_colorpicker();
+			cloneRedactor.fermer_divformat();
 		}
 
 

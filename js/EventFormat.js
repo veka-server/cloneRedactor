@@ -1,18 +1,18 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-        myApp.EventFormat = function(UniqueId)
+        cloneRedactor.EventFormat = function(UniqueId)
         {
-          myApp.argsToArray(document.getElementsByName('format-button_'+UniqueId)).forEach(function(element, index, array)
+          cloneRedactor.argsToArray(document.getElementsByName('format-button_'+UniqueId)).forEach(function(element, index, array)
           {
             element.onclick = function()
             {
               // recuperation de la couleur 
               var type = this.getAttribute("data-commandvalue");
 
-              myApp.customCommand('formatBlock', false, type, UniqueId);
+              cloneRedactor.customCommand('formatBlock', false, type, UniqueId);
             };
           });
 
@@ -24,7 +24,7 @@
               if(divformat.style.display == "none")
               {
                 // fermer les colorpicker
-                myApp.fermer_divformat();
+                cloneRedactor.fermer_divformat();
 
                 divformat.style.display = "block";
                 this.className+=" active"; 
@@ -32,7 +32,7 @@
               else
               {
                 // fermer les colorpicker
-                myApp.fermer_divformat();
+                cloneRedactor.fermer_divformat();
               }
             }
           }

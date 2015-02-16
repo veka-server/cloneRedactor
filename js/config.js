@@ -2,16 +2,16 @@
 (function(){
 
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.httpGet('config/config.json', function(data){
+	cloneRedactor.httpGet('config/config.json', function(data){
 
 		var config = JSON.parse(data);
 
-		myApp.url_upload = config.urlFichierUpload;
+		cloneRedactor.url_upload = config.urlFichierUpload;
 
 		// ajoute le fichier css a la page
-		myApp.addCssFile("css/cloneRedactor.css");
+		cloneRedactor.addCssFile("css/cloneRedactor.css");
 
 	})
 

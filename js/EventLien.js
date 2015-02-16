@@ -1,18 +1,18 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.EventLien = function(UniqueId) {
+	cloneRedactor.EventLien = function(UniqueId) {
 
           if(document.getElementById('link_'+UniqueId))
           {
             document.getElementById('link_'+UniqueId).onclick=function()
             {
                 // enregistrer la selection et continue seulement si une selection est présente
-                if(myApp.enregistrer_selection() == '') return false;
+                if(cloneRedactor.enregistrer_selection() == '') return false;
 
-                myApp.sourceId = UniqueId;
+                cloneRedactor.sourceId = UniqueId;
 
                 //ouverture de la popup
                 document.getElementById('popup_link').popup_open();
@@ -40,9 +40,9 @@
                 else
                 {
                   // restorer la selection
-                  myApp.restorer_selection();
+                  cloneRedactor.restorer_selection();
                   // execution de la commande
-                  myApp.customCommand('createlink', false, url, myApp.sourceId);
+                  cloneRedactor.customCommand('createlink', false, url, cloneRedactor.sourceId);
                 }
               }
             }

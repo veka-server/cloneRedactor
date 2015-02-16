@@ -1,15 +1,15 @@
 // liste des fonctions outils
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-	myApp.argsToArray = function(args) {
+	cloneRedactor.argsToArray = function(args) {
 	  var r = []; for (var i = 0; i < args.length; i++)
 	    r.push(args[i]);
 	  return r;
 	}
 
-	myApp.httpGet = function(theUrl, callback) {
+	cloneRedactor.httpGet = function(theUrl, callback) {
 	    var xmlHttp = null;
 
 	    xmlHttp = new XMLHttpRequest();
@@ -30,21 +30,21 @@
 
 	}
 
-	myApp.getUniqueId = function() {
-		if(myApp.lastId === undefined)
-			myApp.lastId = 0;
+	cloneRedactor.getUniqueId = function() {
+		if(cloneRedactor.lastId === undefined)
+			cloneRedactor.lastId = 0;
 		else
-			myApp.lastId++;
+			cloneRedactor.lastId++;
 	}
 
-	myApp.getStringAfterLastMotif = function(str, motif)
+	cloneRedactor.getStringAfterLastMotif = function(str, motif)
 	{
 	  return str.substr(str.lastIndexOf(motif)+1);
 	}
 
 
-	myApp.fermer_divformat = function() {
-	myApp.argsToArray(document.getElementsByName('DIVformat')).forEach(function(element, index, array)
+	cloneRedactor.fermer_divformat = function() {
+	cloneRedactor.argsToArray(document.getElementsByName('DIVformat')).forEach(function(element, index, array)
 	{
 	  if(element.style.display == "block")
 	  {
@@ -52,7 +52,7 @@
 	    element.style.display = 'none'
 
 	    // desactivation du bouton 
-	    var UniqueId = myApp.getStringAfterLastMotif(element.id, '_');
+	    var UniqueId = cloneRedactor.getStringAfterLastMotif(element.id, '_');
 	    var format = document.getElementById('format_'+UniqueId);
 	    format.className = format.className.replace("active", ""); 
 	  }
@@ -60,7 +60,7 @@
 	}
 
 
-	myApp.post_to_url = function(path, params, method) 
+	cloneRedactor.post_to_url = function(path, params, method) 
 	{
 
 	    method = method || "post";
@@ -84,20 +84,20 @@
 
 
 
-	myApp.enregistrer_selection = function()
+	cloneRedactor.enregistrer_selection = function()
 	{
 	  savedRange = window.getSelection().getRangeAt(0);
 
 	  return savedRange;
 	}
 
-	myApp.restorer_selection = function()
+	cloneRedactor.restorer_selection = function()
 	{
 	   window.getSelection().removeAllRanges();
 	   window.getSelection().addRange(savedRange);
 	}
 
-	myApp.creer_selection = function(startContainer, startOffset, endContainer, endOffset)
+	cloneRedactor.creer_selection = function(startContainer, startOffset, endContainer, endOffset)
 	{
 	  var range = document.createRange();
 	  range.setStart(startContainer, startOffset);
@@ -108,16 +108,16 @@
 	  sel.addRange(range);
 	}
 
-	myApp.selectAllNode = function(Node)
+	cloneRedactor.selectAllNode = function(Node)
 	{
 	  // selection
 	  creer_selection(Node, 0, Node, Node.textContent.length)
 	}
 
 	// cacher les colorpicker ouvert
-	myApp.fermer_colorpicker = function()
+	cloneRedactor.fermer_colorpicker = function()
 	{
-	myApp.argsToArray(document.getElementsByName('DIVcolorpicker')).forEach(function(element, index, array)
+	cloneRedactor.argsToArray(document.getElementsByName('DIVcolorpicker')).forEach(function(element, index, array)
 	{
 	  if(element.style.display == "block")
 	  {
@@ -125,7 +125,7 @@
 	    element.style.display = 'none'
 
 	    // desactivation du bouton 
-	    var UniqueId = myApp.getStringAfterLastMotif(element.id, '_');
+	    var UniqueId = cloneRedactor.getStringAfterLastMotif(element.id, '_');
 	    var forecolor = document.getElementById('forecolor_'+UniqueId);
 	    forecolor.className = forecolor.className.replace(" active", ""); 
 	  }
@@ -133,7 +133,7 @@
 	}
 
 
-	myApp.customCommand = function(command, paramb, paramc, UniqueId) {
+	cloneRedactor.customCommand = function(command, paramb, paramc, UniqueId) {
 
 		var desactiver_editeur_sauf = function(UniqueId) {
 			var nb_editor = document.getElementsByName("ewysiwyg").length-1;
@@ -165,7 +165,7 @@
 		reactiver_editeur();        
 	}
 
-	myApp.addCssFile = function(lien){
+	cloneRedactor.addCssFile = function(lien){
 
 		var newCss = document.createElement("link");
 		newCss.setAttribute("rel", "stylesheet") ;

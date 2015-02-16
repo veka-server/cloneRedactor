@@ -1,9 +1,9 @@
 // clone redactor
 (function(){
 	// requis
-	var myApp = window.myApp = window.myApp || {};
+	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-        myApp.refresh = function(element,editeur)
+        cloneRedactor.refresh = function(element,editeur)
         {
 			// test toute les 500ms si le contenu du div editeur a etait modifié, 
 			// si oui il copie le contenu du div vers le textarea d'origine.
