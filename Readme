@@ -1,1 +1,6 @@
 Voir http://cloneredactor.veka-server.com/ pour plus d'informations
+
+INSTALLATION
+===
+
+Editez le fichier de configuration dans le dossier config et n'oubliez pas de donner les droits d'ecriture au dossier d'upload.

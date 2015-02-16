@@ -9,13 +9,25 @@
 	  return r;
 	}
 
-	myApp.httpGet = function(theUrl) {
+	myApp.httpGet = function(theUrl, callback) {
 	    var xmlHttp = null;
 
 	    xmlHttp = new XMLHttpRequest();
-	    xmlHttp.open( "GET", theUrl, false );
+
+		xmlHttp.onreadystatechange=function()
+		{
+			if (xmlHttp.readyState==4 && xmlHttp.status==200)
+		    {
+		        if (typeof callback === 'function') 
+		        {
+		        	callback(xmlHttp.responseText);
+		        }
+		    }
+		}
+
+	    xmlHttp.open( "GET", theUrl, true );
 	    xmlHttp.send( null );
-	    return xmlHttp.responseText;
+
 	}
 
 	myApp.getUniqueId = function() {

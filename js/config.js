@@ -4,11 +4,15 @@
 	// requis
 	var myApp = window.myApp = window.myApp || {};
 
-	var config = JSON.parse(myApp.httpGet('config/config.json'))
+	myApp.httpGet('config/config.json', function(data){
 
-	myApp.url_upload = config.urlFichierUpload;
+		var config = JSON.parse(data);
 
-	// ajoute le fichier css a la page
-	myApp.addCssFile("css/cloneRedactor.css");
+		myApp.url_upload = config.urlFichierUpload;
+
+		// ajoute le fichier css a la page
+		myApp.addCssFile("css/cloneRedactor.css");
+
+	})
 
 })();
