@@ -16,6 +16,9 @@
 		textarea_editor.style.minHeight = element.offsetHeight-14+'px';
 		editor.style.width = element.offsetWidth-14+'px';
 
+		// ajoute le contenu du textarea dans le redactor
+        editeur.innerHTML = textarea_editor.value;
+
 	    //defini le div comme editable
         editeur.contentEditable='true';
 

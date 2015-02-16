@@ -107,10 +107,9 @@
 	{{/outils}}
 	</div>
 	
-	<div style="min-height: 186px;" id="div_editor_{{UniqueId}}" contenteditable="false">
-	{{contenu}}
-	</div>
-	<textarea id="textarea_editor_{{UniqueId}}" style="min-height: 186px; display: none;"></textarea>
+	<div style="min-height: 186px;" id="div_editor_{{UniqueId}}" contenteditable="false"></div>
+
+	<textarea id="textarea_editor_{{UniqueId}}" style="min-height: 186px; display: none;">{{contenu}}</textarea>
 </div>
 
 <div class="popup" id="popup_link">

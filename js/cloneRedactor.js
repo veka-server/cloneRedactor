@@ -22,6 +22,7 @@
 
 	    	// dissimule le textarea originel
 	    	element.style.display = 'none';
+
 		})
 
     }

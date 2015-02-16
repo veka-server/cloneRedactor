@@ -90,13 +90,18 @@
               // fermeture de la popup
               document.getElementById('popup_image').popup_close();
 
-              if(url != '') // si il y a une url
+              if(url == '' || url == 'echec') 
+              {
+                  alert("Impossible d'uploader le fichier, verifiez si le dossier d'upload est disponible en ecriture.")
+              }
+              else
               {
                   // restorer la selection
                   myApp.restorer_selection();
                   // execution de la commande
                   myApp.customCommand('insertimage', false, url, myApp.sourceId);
               }
+
             }
           }
 
