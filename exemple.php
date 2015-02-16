@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<style type="text/css">
 
-		#montextarea {
+		.cloneRedactor {
 			width: 700px;
 			height: 100px;
 		}
@@ -14,7 +14,7 @@
 <body>
 
 
-	<textarea class="cloneRedactor" id='montextarea' >
+	<textarea class="cloneRedactor" >
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -23,7 +23,7 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</textarea>
 
-	<textarea class="cloneRedactor" id='montextarea' data-outils='html,|,bold,italic,underline,rayer,|,alignleft,aligncenter,alignright' >
+	<textarea class="cloneRedactor" data-outils='html,|,bold,italic,underline,rayer,|,alignleft,aligncenter,alignright' >
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
