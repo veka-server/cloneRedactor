@@ -16,7 +16,7 @@
 
 		{{#format}}
 			<div style="float:left;position:relative;">
-				<input title="paragraphe" class="icon-wysiwyg-format" id="format_{{UniqueId}}" type="button">
+				<input title="Paragraphe" class="icon-wysiwyg-format" id="format_{{UniqueId}}" type="button">
 				<div id="DIVformat_{{UniqueId}}" name="DIVformat" style="display:none">
 					<input name="format-button_{{UniqueId}}" value="Paragraphe" data-commandvalue="p" type="button">
 					<input name="format-button_{{UniqueId}}" value="Code" data-commandvalue="pre" type="button">
@@ -31,7 +31,7 @@
 
 		{{#colorText}}
 			<div style="float:left;position:relative;">
-				<input title="changer la couleur du texte" class="icon-wysiwyg-color forecolor" id="forecolor_{{UniqueId}}" type="button">
+				<input title="Changer la couleur du texte" class="icon-wysiwyg-color forecolor" id="forecolor_{{UniqueId}}" type="button">
 				<div id="DIVcolorpicker_{{UniqueId}}" style="display:none;" name="DIVcolorpicker">
 					<input name="color-forecolor_{{UniqueId}}" class="color-1" data-commandvalue="#ffffff" type="button">
 					<input name="color-forecolor_{{UniqueId}}" class="color-2" data-commandvalue="#000000" type="button">
