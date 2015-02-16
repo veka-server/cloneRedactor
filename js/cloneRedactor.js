@@ -9,7 +9,7 @@
     	// rassemble les variables pour la creation du redactor
 		var parametres = cloneRedactor.genConfig(element, outils);
 
-		cloneRedactor.httpGet("template/test.php", function(data){
+		cloneRedactor.httpGet(cloneRedactor.URL+"/template/test.php", function(data){
 
 	    	// generer le code html du cloneRedactor
 			var output = Mustache.render(data, parametres);

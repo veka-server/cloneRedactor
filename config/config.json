@@ -1,5 +1,5 @@
 {
-	"cheminAbsoluDossierUpload"	:	"/srv/http/cloneRedactor/upload/",
-	"urlDossierUpload"			:	"http://localhost/cloneRedactor/upload/",
-	"urlFichierUpload"			:	"http://localhost/cloneRedactor/php/upload.php"
+	"cheminAbsoluDossierUpload"	:	"/srv/http/mmp/cloneRedactor/upload/",
+	"urlDossierUpload"			:	"http://localhost/mmp/cloneRedactor/upload/",
+	"urlFichierUpload"			:	"http://localhost/mmp/cloneRedactor/php/upload.php"
 }
