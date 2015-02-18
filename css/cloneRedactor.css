@@ -59,7 +59,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
   z-index: 100;
 }
 
-.popup
+[id^="editor"] .popup
 {
   display:none;
   border-radius:3px;
@@ -83,21 +83,21 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     word-wrap: break-word;
   }
 
-  .focus
+[id^="editor"]  .focus
   {
     border-color: rgba(82, 168, 236, 0.8);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
     outline: 0 none;
   }
 
-  [id^="div_editor"]
+[id^="editor"]  [id^="div_editor"]
   {
     background: none repeat scroll 0% 0% white;
     padding:7px;
     cursor:text;
   }
 
-  [id^="textarea_editor"]
+[id^="editor"]  [id^="textarea_editor"]
   {
     margin: 0px !important;
     border:none;
@@ -105,12 +105,12 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     resize: none; 
   }
 
-  [id^="div_editor"]:focus
+[id^="editor"]  [id^="div_editor"]:focus
   {
     outline: none;
   }
 
-  [id^="outils"]
+[id^="editor"]  [id^="outils"]
   {
     border-bottom:1px solid #BBBBBB;    
     height:33px;
@@ -123,7 +123,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     padding-left:3px;
   }
 
-  .separateur
+[id^="editor"]  .separateur
   {
     float:left;
     border-left:1px solid #DDDDDD;    
@@ -132,7 +132,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     height:33px;
   }
 
-  [id^="outils"] [class^="icon-wysiwyg"]
+[id^="editor"]  [id^="outils"] [class^="icon-wysiwyg"]
   {
     cursor:pointer;
     float:left;
@@ -143,24 +143,24 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     opacity: 0.6;
   }
 
-  [id^="outils"] [class^="icon-wysiwyg"]:hover
+[id^="editor"]  [id^="outils"] [class^="icon-wysiwyg"]:hover
   {
     border:1px solid #98A6BA;
     background-color: rgb(221, 228, 239);
   }
 
-  [id^="outils"] [class^="icon-wysiwyg"]::-moz-focus-inner 
+[id^="editor"]  [id^="outils"] [class^="icon-wysiwyg"]::-moz-focus-inner 
   {
     border:none;
   }
 
-  [id^="outils"] .active
+[id^="editor"]  [id^="outils"] .active
   {
     border:1px solid rgb(181, 181, 181);
     background-color: rgb(221, 221, 221);
   }
 
-  [id^="DIVcolorpicker"],  [id^="DIVbackcolorpicker"]
+[id^="editor"]  [id^="DIVcolorpicker"],  [id^="DIVbackcolorpicker"]
   {
     position:absolute;
     top:32px;
@@ -175,7 +175,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     box-shadow: 0px 2px 4px rgb(204, 204, 204);  
   }
 
-  [id^="DIVformat_"]
+[id^="editor"]  [id^="DIVformat_"]
   {
     position: absolute;
     top:32px;
@@ -186,7 +186,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     box-shadow: 0px 2px 4px rgb(204, 204, 204);  
   }
 
-  [id^="DIVformat_"] input
+[id^="editor"]  [id^="DIVformat_"] input
   {
     text-align: left;
     padding:5px;
@@ -199,7 +199,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     font-weight: bold;
   }
 
-  [id^="DIVformat_"] input:hover
+[id^="editor"]  [id^="DIVformat_"] input:hover
   {
     color:black;
     background: #F0F0F0;
@@ -300,12 +300,12 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAc0lEQVQ4T2NkgID/UJoRShNNIWsAGYLOJ2gQTQ0gaDtIAcl+RjcVZgAsEEk2FNkFAkDd70l1FcyABqDGBCBeAMQgNnLU4g0LZC8IAlV+QFKN7C2chlA1DIiKNprGAizgSEob+MKApECEeQ05Q5FkANkpEQD2kBYLgmTgBQAAAABJRU5ErkJggg==) no-repeat;
   }
 
-  [class^="icon-wysiwyg"]
+[id^="editor"]  [class^="icon-wysiwyg"]
   {
     background-position: 4px 4px;
   }
 
-  [class^="color-"]
+[id^="editor"]  [class^="color-"]
   {
     cursor:pointer;
     display:inline-block;
@@ -520,7 +520,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 }
 
 
-#popup_link, #popup_image
+[id^="editor"] #popup_link, #popup_image
 {
     width:60%;
     padding:20px;
@@ -528,26 +528,26 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
     text-align:center;
 }
 
-#popup_link h1, #popup_image h1
+[id^="editor"] #popup_link h1, #popup_image h1
 {
     font-size:18px;
     margin-bottom:20px;
 }
 
-input.inputlien
+[id^="editor"] input.inputlien
 {
   margin-top: 7px;
   height:30px;
   width:80%;
 }
 
-#popup_link input[type="button"] , #popup_image input[type="button"]
+[id^="editor"] #popup_link input[type="button"] , #popup_image input[type="button"]
 {
     margin-top:20px;
     width:50%;
 }
 
-#store_uploadimgjhfgbd img
+[id^="editor"] #store_uploadimgjhfgbd img
 {
   width:300px;
 }
