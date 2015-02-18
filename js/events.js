@@ -23,6 +23,10 @@
 		editor.style.marginRight = style.marginRight;
 		editor.style.marginBottom = style.marginBottom;
 
+		editor.style.minHeight = style.height;
+		editor.style.width = style.width;
+		textarea_editor.style.width = style.width;
+
 		// ajoute le contenu du textarea dans le redactor
         editeur.innerHTML = textarea_editor.value;
 
