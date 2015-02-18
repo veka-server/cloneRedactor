@@ -25,6 +25,21 @@
 
 		editor.style.minHeight = style.height;
 		editor.style.width = style.width;
+
+		// copy border
+		editor.style.borderRightWidth = style.borderRightWidth;
+		editor.style.borderLeftWidth = style.borderLeftWidth;
+		editor.style.borderBottomWidth = style.borderBottomWidth;
+		editor.style.borderTopWidth = style.borderTopWidth;
+		editor.style.borderRightStyle = style.borderRightStyle;
+		editor.style.borderLeftStyle = style.borderLeftStyle;
+		editor.style.borderBottomStyle = style.borderBottomStyle;
+		editor.style.borderTopStyle = style.borderTopStyle;
+		editor.style.borderRightColor = style.borderRightColor;
+		editor.style.borderLeftColor = style.borderLeftColor;
+		editor.style.borderBottomColor = style.borderBottomColor;
+		editor.style.borderTopColor = style.borderTopColor;
+
 		textarea_editor.style.width = style.width;
 
 		// ajoute le contenu du textarea dans le redactor
