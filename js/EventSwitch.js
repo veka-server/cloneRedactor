@@ -13,8 +13,7 @@
               {
                 this.className+=" active"; 
                 textarea_editor.value = editeur.innerHTML;
-                textarea_editor.style.height = editeur.offsetHeight-14+'px';
-                textarea_editor.style.width = editeur.offsetWidth-14+'px';
+                textarea_editor.style.height = editeur.offsetHeight+'px';
                 textarea_editor.style.display = "block";
                 editeur.style.display = "none";
               }
