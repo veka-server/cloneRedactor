@@ -110,22 +110,23 @@
 	<div style="min-height: 186px;" id="div_editor_{{UniqueId}}" contenteditable="false"></div>
 
 	<textarea id="textarea_editor_{{UniqueId}}" style="min-height: 186px; display: none;">{{contenu}}</textarea>
-</div>
 
-<div class="popup" id="popup_link">
-	<h1>Inserer un lien</h1>URL : <input id="url-lien" class="inputlien" placeholder="lien ves la page" type="url">
-	<input class="btn btn-primary" value="Valider" id="creer_link" type="button">
-</div>
+	<div class="popup" id="popup_link">
+		<h1>Inserer un lien</h1>URL : <input id="url-lien" class="inputlien" placeholder="lien ves la page" type="url">
+		<input class="btn btn-primary" value="Valider" id="creer_link" type="button">
+	</div>
 
-<div class="popup" id="popup_image">
-	<h1>Inserer une image</h1>Url : <input id="url-image" class="inputlien" placeholder="lien vers l'image" type="url">
-	<br>
-	<br>
-	<span class="muted">Ou séléctionnez un fichier local :</span>
-	<br>
-	<input name="image" id="upload_image" style="display:none;" type="file">
-	<input class="button_upload btn btn-warning" id="btn_upload_image" value="Heberger une image" type="button">
-	<div id="store_uploadimgjhfgbd"></div>
-	<br>
-	<input class="btn btn-primary" value="Valider" id="creer_image" type="button">
+	<div class="popup" id="popup_image">
+		<h1>Inserer une image</h1>Url : <input id="url-image" class="inputlien" placeholder="lien vers l'image" type="url">
+		<br>
+		<br>
+		<span class="muted">Ou séléctionnez un fichier local :</span>
+		<br>
+		<input name="image" id="upload_image" style="display:none;" type="file">
+		<input class="button_upload btn btn-warning" id="btn_upload_image" value="Heberger une image" type="button">
+		<div id="store_uploadimgjhfgbd"></div>
+		<br>
+		<input class="btn btn-primary" value="Valider" id="creer_image" type="button">
+	</div>
+
 </div>
