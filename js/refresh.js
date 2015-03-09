@@ -18,7 +18,7 @@
 				if(new_OriginalTextarea != old_OriginalTextarea)
 				{
 					textarea_editor.innerHTML = new_OriginalTextarea;
-	                editeur.innerHTML = textarea_editor.value;
+	        			editeur.innerHTML = textarea_editor.value;
 					old_OriginalTextarea = new_OriginalTextarea;	
 					old_editeur = textarea_editor.value;
 				}
