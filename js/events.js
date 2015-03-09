@@ -62,7 +62,7 @@
         cloneRedactor.EventSwitch(textarea_editor, editeur, UniqueId);
 
         // copie, toutes les 100ms, les données dans le textarea originel
-        cloneRedactor.refresh(element,editeur)
+        cloneRedactor.refresh(element,editeur, textarea_editor)
 
         // fermer les fenetre ouverte si l'on clique a l'exterieur de celle-ci
         cloneRedactor.closeInutilise();
