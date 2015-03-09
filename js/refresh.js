@@ -3,20 +3,34 @@
 	// requis
 	var cloneRedactor = window.cloneRedactor = window.cloneRedactor || {};
 
-        cloneRedactor.refresh = function(element,editeur)
+        cloneRedactor.refresh = function(OriginalTextarea,editeur,textarea_editor)
         {
 			// test toute les 500ms si le contenu du div editeur a etait modifié, 
 			// si oui il copie le contenu du div vers le textarea d'origine.
-			var old_html = editeur.innerHTML;
+			var old_OriginalTextarea = OriginalTextarea.innerHTML;
+			var old_editeur = editeur.innerHTML;
 			setInterval(function()
 			{
-				var newHtml = editeur.innerHTML;
-				if (newHtml != old_html) 
+
+				var new_OriginalTextarea = OriginalTextarea.innerHTML;
+				var new_editeur = editeur.innerHTML;
+
+				if(new_OriginalTextarea != old_OriginalTextarea)
 				{
-					element.innerHTML=editeur.innerHTML;
-					old_html = newHtml;
+					textarea_editor.innerHTML = new_OriginalTextarea;
+	                		editeur.innerHTML = textarea_editor.value;
+					old_OriginalTextarea = new_OriginalTextarea;	
+					old_editeur = textarea_editor.value;
 				}
-			}, 100);
+				else if (new_editeur != old_editeur)
+				{
+					OriginalTextarea.innerHTML = new_editeur;
+					old_OriginalTextarea = OriginalTextarea.innerHTML;
+					old_editeur = new_editeur;
+				}
+
+			}, 200);
+
         }
 
 })();
